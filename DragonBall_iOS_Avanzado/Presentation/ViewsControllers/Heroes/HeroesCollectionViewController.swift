@@ -22,6 +22,7 @@ final class HeroesCollectionViewController: UIViewController {
     private var viewModel: HeroesViewModel
     
     private var dataSource: DataSource?
+    private var lastCollectionViewWidth: CGFloat = 0
     
     //MARK: Inits
     init(viewModel: HeroesViewModel = HeroesViewModel()) {
@@ -41,6 +42,14 @@ final class HeroesCollectionViewController: UIViewController {
         setupNavigationBarWithLogout()
         setObservers()
         collectionView.delegate = self
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        if collectionView.bounds.width != lastCollectionViewWidth {
+            lastCollectionViewWidth = collectionView.bounds.width
+            setUpCollectionView()
+        }
     }
 }
 
@@ -91,7 +100,17 @@ extension HeroesCollectionViewController: UICollectionViewDelegate {
 extension HeroesCollectionViewController {
     func setUpCollectionView() {
         let layout = UICollectionViewFlowLayout()
-        layout.itemSize = CGSize(width: 190, height: 190)
+        let itemsPerRow: CGFloat = 2
+        let padding: CGFloat = 16
+        let interItemSpacing: CGFloat = 12
+        let totalPadding = padding * 2 + interItemSpacing * (itemsPerRow - 1)
+        let availableWidth = collectionView.bounds.width - totalPadding
+        let itemWidth = floor(availableWidth / itemsPerRow)
+        let itemHeight = itemWidth // Puedes ajustar la altura si quieres celdas rectangulares
+        layout.itemSize = CGSize(width: itemWidth, height: itemHeight)
+        layout.sectionInset = UIEdgeInsets(top: 16, left: padding, bottom: 16, right: padding)
+        layout.minimumLineSpacing = 16
+        layout.minimumInteritemSpacing = interItemSpacing
         collectionView.collectionViewLayout = layout
         
         let registration = UICollectionView.CellRegistration<HeroCollectionViewCell, NSMHero>(

@@ -10,7 +10,18 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DetailViewController" customModule="DragonBall_iOS_Avanzado" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DetailViewController" customModule="DragonBall_iOS_Avanzado" customModuleProvider="target">
+            <connections>
+                <outlet property="collectionView" destination="ZZl-ej-ZAX" id="b65-FD-dGf"/>
+                <outlet property="descriptionText" destination="8YP-9l-bNa" id="66L-QV-Gtf"/>
+                <outlet property="loadingView" destination="zbA-B8-XHu" id="Fin-NG-kF2"/>
+                <outlet property="mapView" destination="3Fq-Lb-pd0" id="fLG-Pr-215"/>
+                <outlet property="nameLabel" destination="tyM-tA-8VD" id="pgM-Pa-baP"/>
+                <outlet property="segmentedControl" destination="eZ0-cc-M7M" id="9cF-z7-f9A"/>
+                <outlet property="transformationsView" destination="tWS-F0-7P2" id="4nF-Ad-qOR"/>
+                <outlet property="view" destination="sGw-bK-XHA" id="YO3-as-o72"/>
+            </connections>
+        </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="sGw-bK-XHA">
             <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>

@@ -9,7 +9,14 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HeroesCollectionViewController" customModule="DragonBall_iOS_Avanzado" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HeroesCollectionViewController" customModule="DragonBall_iOS_Avanzado" customModuleProvider="target">
+            <connections>
+                <outlet property="collectionView" destination="a9J-Yd-GNR" id="Ccv-UI-2J4"/>
+                <outlet property="loadingView" destination="6m9-Vd-Rf4" id="QIg-UZ-kFj"/>
+                <outlet property="searchBar" destination="FR8-1f-duX" id="GM9-Yg-eqR"/>
+                <outlet property="view" destination="RBH-LJ-x0b" id="JJa-Zp-HDt"/>
+            </connections>
+        </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="RBH-LJ-x0b">
             <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
@@ -41,6 +48,10 @@
                             </collectionViewFlowLayout>
                         </collectionView>
                     </subviews>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="a9J-Yd-GNR" secondAttribute="trailing" constant="8" id="8BK-TN-Kud"/>
+                        <constraint firstItem="a9J-Yd-GNR" firstAttribute="leading" secondItem="4ia-LW-vKi" secondAttribute="leading" constant="8" id="ZH9-ta-CGb"/>
+                    </constraints>
                 </stackView>
                 <view hidden="YES" alpha="0.40000000596046448" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6m9-Vd-Rf4" userLabel="LoadingView">
                     <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
@@ -61,6 +72,8 @@
                 <constraint firstAttribute="bottom" secondItem="xcb-YF-FiB" secondAttribute="bottom" id="9NS-pv-VYu"/>
                 <constraint firstItem="4ia-LW-vKi" firstAttribute="leading" secondItem="z7p-jy-rH6" secondAttribute="leading" id="IUH-xN-W4Y"/>
                 <constraint firstItem="gLL-0N-sNd" firstAttribute="top" secondItem="RBH-LJ-x0b" secondAttribute="top" id="On0-d1-9Od"/>
+                <constraint firstItem="4ia-LW-vKi" firstAttribute="leading" secondItem="z7p-jy-rH6" secondAttribute="leading" constant="8" id="Rdr-vb-ZIw"/>
+                <constraint firstItem="4ia-LW-vKi" firstAttribute="trailing" secondItem="z7p-jy-rH6" secondAttribute="trailing" constant="8" id="Wsp-nJ-JEn"/>
                 <constraint firstItem="6m9-Vd-Rf4" firstAttribute="top" secondItem="RBH-LJ-x0b" secondAttribute="top" id="ZB4-k7-06E"/>
                 <constraint firstItem="4ia-LW-vKi" firstAttribute="top" secondItem="z7p-jy-rH6" secondAttribute="top" id="djn-Hb-qf6"/>
                 <constraint firstAttribute="bottom" secondItem="6m9-Vd-Rf4" secondAttribute="bottom" id="hCW-0F-dHC"/>

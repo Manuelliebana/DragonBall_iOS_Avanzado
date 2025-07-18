@@ -9,7 +9,14 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DetailTransformationsViewController" customModule="DragonBall_iOS_Avanzado" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DetailTransformationsViewController" customModule="DragonBall_iOS_Avanzado" customModuleProvider="target">
+            <connections>
+                <outlet property="descriptionTransformation" destination="RaM-Wb-U8n" id="1wM-qW-Swv"/>
+                <outlet property="imageTransformation" destination="frc-V8-k0U" id="lax-QD-lRs"/>
+                <outlet property="nameLabel" destination="BtF-gA-wfe" id="CJi-wv-UMt"/>
+                <outlet property="view" destination="oEL-B7-EIn" id="XKT-5R-kxY"/>
+            </connections>
+        </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="oEL-B7-EIn">
             <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
@@ -67,7 +74,7 @@
         </view>
     </objects>
     <resources>
-        <image name="fondo4" width="1080" height="1920"/>
+        <image name="fondo4" width="213.33332824707031" height="462"/>
         <namedColor name="CustomColor1">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

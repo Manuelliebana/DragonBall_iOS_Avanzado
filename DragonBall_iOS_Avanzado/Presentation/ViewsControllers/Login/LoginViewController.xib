@@ -9,7 +9,18 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginViewController" customModule="DragonBall_iOS_Avanzado" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginViewController" customModule="DragonBall_iOS_Avanzado" customModuleProvider="target">
+            <connections>
+                <outlet property="constraintBottomLoginButton" destination="qOF-sN-Mnv" id="sqs-VL-PBe"/>
+                <outlet property="constraintTopLoginButton" destination="0DY-pD-s8h" id="a6B-hc-GCa"/>
+                <outlet property="emailTextField" destination="Cn6-Bh-aEk" id="BDs-Zw-g3K"/>
+                <outlet property="errorEmail" destination="1Y9-Lb-61w" id="d01-A8-Un0"/>
+                <outlet property="errorPassword" destination="Qoy-xd-moA" id="ZiD-VX-v4Z"/>
+                <outlet property="loadingView" destination="8Hf-8O-W9f" id="1QD-wz-xIq"/>
+                <outlet property="passwordTextField" destination="KDD-8k-YPl" id="Ihm-Ga-1Mp"/>
+                <outlet property="view" destination="Hpv-T7-QX2" id="cjA-8N-7tP"/>
+            </connections>
+        </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="Hpv-T7-QX2">
             <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
@@ -75,11 +86,14 @@
                         <constraint firstAttribute="height" constant="38" id="Icv-ve-VkC"/>
                     </constraints>
                     <state key="normal" title="Button"/>
-                    <buttonConfiguration key="configuration" style="filled" title="LOGIN" cornerStyle="capsule">
+                    <buttonConfiguration key="configuration" style="filled" title="Iniciar sesión" cornerStyle="capsule">
                         <fontDescription key="titleFontDescription" type="boldSystem" pointSize="22"/>
-                        <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="baseForegroundColor" name="CustomColor2"/>
                         <color key="baseBackgroundColor" name="CustomColor3"/>
                     </buttonConfiguration>
+                    <connections>
+                        <action selector="didTapLoginButton:" destination="-1" eventType="touchUpInside" id="AXH-M1-iCA"/>
+                    </connections>
                 </button>
                 <view hidden="YES" alpha="0.40000000596046448" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Hf-8O-W9f" userLabel="CargingView">
                     <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
@@ -122,7 +136,7 @@
         </view>
     </objects>
     <resources>
-        <image name="fondo4" width="1080" height="1920"/>
+        <image name="fondo4" width="213.33332824707031" height="462"/>
         <namedColor name="CustomColor1">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
@@ -130,7 +144,7 @@
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="CustomColor3">
-            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
