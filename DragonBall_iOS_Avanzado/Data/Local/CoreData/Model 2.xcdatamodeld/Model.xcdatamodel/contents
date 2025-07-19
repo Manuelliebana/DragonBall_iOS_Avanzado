@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="22522" systemVersion="23B81" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithSwiftData="YES" userDefinedModelVersionIdentifier="">
+    <entity name="Hero" representedClassName="NSMHero" syncable="YES">
+        <attribute name="descrip" optional="YES" attributeType="String"/>
+        <attribute name="id" optional="YES" attributeType="String"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="photo" optional="YES" attributeType="String"/>
+        <relationship name="heroToLocations" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Locations" inverseName="hero" inverseEntity="Locations"/>
+        <relationship name="heroToTransformations" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Transformations" inverseName="hero" inverseEntity="Transformations"/>
+        <uniquenessConstraints>
+            <uniquenessConstraint>
+                <constraint value="id"/>
+            </uniquenessConstraint>
+        </uniquenessConstraints>
+    </entity>
+    <entity name="Locations" representedClassName="NSMLocations" syncable="YES">
+        <attribute name="date" optional="YES" attributeType="String"/>
+        <attribute name="id" optional="YES" attributeType="String"/>
+        <attribute name="latitude" optional="YES" attributeType="String"/>
+        <attribute name="longitude" optional="YES" attributeType="String"/>
+        <relationship name="hero" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Hero" inverseName="heroToLocations" inverseEntity="Hero"/>
+        <uniquenessConstraints>
+            <uniquenessConstraint>
+                <constraint value="id"/>
+            </uniquenessConstraint>
+        </uniquenessConstraints>
+    </entity>
+    <entity name="Transformations" representedClassName="NSMTransformations" syncable="YES">
+        <attribute name="descrip" optional="YES" attributeType="String"/>
+        <attribute name="id" optional="YES" attributeType="String"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="photo" optional="YES" attributeType="String"/>
+        <relationship name="hero" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Hero" inverseName="heroToTransformations" inverseEntity="Hero"/>
+        <uniquenessConstraints>
+            <uniquenessConstraint>
+                <constraint value="id"/>
+            </uniquenessConstraint>
+        </uniquenessConstraints>
+    </entity>
+</model>
