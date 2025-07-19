@@ -47,10 +47,14 @@ extension SplashViewController {
                 self?.showLoading(show: true)
             case .noToken:
                 self?.showLoading(show: false)
-                self?.navigateToLogin()
+                DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
+                    self?.navigateToLogin()
+                }
             case .haveToken:
                 self?.showLoading(show: false)
-                self?.navigateToHeroes()
+                DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
+                    self?.navigateToHeroes()
+                }
             }
         }
     }

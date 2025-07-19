@@ -124,6 +124,7 @@ extension ApiProvider {
                 completion(.failure(.errorCode(statusCode)))
                 return
             }
+            
             guard let response = try? JSONDecoder().decode([T].self, from: data) else {
                 completion(.failure(.decoding))
                 return

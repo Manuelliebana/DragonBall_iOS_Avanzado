@@ -17,6 +17,7 @@ final class HeroesViewModel {
     private var apiProvider: ApiProvider
     private var storeDataProvider : StoreDataProvider
     var heroes: [NSMHero] = []
+    private var allHeroes: [NSMHero] = []
     
     //MARK: - Inits
     init(apiProvider: ApiProvider = ApiProvider(),
@@ -34,7 +35,7 @@ final class HeroesViewModel {
     func loadData() {
         heroesViewState?(.loading(true))
         sortDescriptor()
-        if heroes.isEmpty {
+        if allHeroes.isEmpty {
             getHeroes()
         } else {
             notifyDataUpdated()
@@ -61,6 +62,8 @@ final class HeroesViewModel {
                 var custonListHeroes = heroes
                 custonListHeroes.removeAll { $0.name == "Quake (Daisy Johnson)"}
                 self?.storeDataProvider.insert(heroes: custonListHeroes)
+                self?.allHeroes = self?.storeDataProvider.fetchHeroes() ?? []
+                self?.heroes = self?.allHeroes ?? []
                 self?.notifyDataUpdated()
             case .failure(let error):
                 debugPrint("Error loading heroes \(error.description)")
@@ -72,6 +75,15 @@ final class HeroesViewModel {
     func sortDescriptor(ascending: Bool = true ) {
         let sort = NSSortDescriptor(keyPath: \NSMHero.name, ascending: ascending)
         self.heroes = self.storeDataProvider.fetchHeroes(sorting: [sort])
+    }
+    
+    func filterHeroes(with text: String) {
+        if text.isEmpty {
+            heroes = allHeroes
+        } else {
+            heroes = allHeroes.filter { $0.name?.lowercased().contains(text.lowercased()) == true }
+        }
+        notifyDataUpdated()
     }
     
     //MARK: - Observers

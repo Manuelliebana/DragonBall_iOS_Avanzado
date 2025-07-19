@@ -144,6 +144,8 @@ extension StoreDataProvider {
         }
     }
     
+
+    
     func clearBBDD() {
         let deleteHeroes = NSBatchDeleteRequest(fetchRequest: NSMHero.fetchRequest())
         let deleteTransformations = NSBatchDeleteRequest(fetchRequest: NSMTransformations.fetchRequest())
@@ -158,6 +160,8 @@ extension StoreDataProvider {
             }
         }
     }
+    
+
     
     func saveContext() {
         if context.hasChanges {

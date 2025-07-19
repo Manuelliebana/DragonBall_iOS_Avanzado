@@ -48,6 +48,18 @@ final class DetailViewController: UIViewController {
         collectionView.delegate = self
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        // Asegurar que el mapa se cargue correctamente
+        mapView.setNeedsLayout()
+        mapView.layoutIfNeeded()
+        
+        // Configuración adicional para evitar errores de recursos
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+            self.mapView.setNeedsDisplay()
+        }
+    }
+    
     @IBAction func changeMapType(_ sender: UISegmentedControl) {
         switch sender.selectedSegmentIndex {
         case 0:
@@ -96,8 +108,26 @@ extension DetailViewController: MKMapViewDelegate {
     private func configureUI() {
         nameLabel.text = viewModel.hero.name
         descriptionText.text = viewModel.hero.descrip
+        
+        // Configurar mapa correctamente
         mapView.delegate = self
         mapView.showsUserTrackingButton = true
+        mapView.mapType = .standard // Asegurar que empiece en modo estándar
+        
+        // Configuraciones adicionales para evitar errores
+        mapView.showsCompass = true
+        mapView.showsScale = true
+        mapView.showsTraffic = false
+        mapView.showsBuildings = true
+        
+        // Configurar región por defecto (Madrid) para que el mapa se cargue
+        let defaultRegion = MKCoordinateRegion(
+            center: CLLocationCoordinate2D(latitude: 40.4168, longitude: -3.7038),
+            latitudinalMeters: 100000,
+            longitudinalMeters: 100000
+        )
+        mapView.setRegion(defaultRegion, animated: false)
+        
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .horizontal
         layout.itemSize = CGSize(width: 300, height: 150)
@@ -106,11 +136,21 @@ extension DetailViewController: MKMapViewDelegate {
     
     private func updateDataInterface() {
         addAnnotations()
+        
         if let annotation = mapView.annotations.first {
+            // Si hay ubicaciones, centrar en la primera
             let region = MKCoordinateRegion(center: annotation.coordinate,
                                             latitudinalMeters: 100000,
                                             longitudinalMeters: 100000)
-            mapView.region = region
+            mapView.setRegion(region, animated: true)
+        } else {
+            // Si no hay ubicaciones, mantener la región por defecto (Madrid)
+            let defaultRegion = MKCoordinateRegion(
+                center: CLLocationCoordinate2D(latitude: 40.4168, longitude: -3.7038),
+                latitudinalMeters: 100000,
+                longitudinalMeters: 100000
+            )
+            mapView.setRegion(defaultRegion, animated: false)
         }
     }
     
@@ -118,10 +158,13 @@ extension DetailViewController: MKMapViewDelegate {
         var annotations = [HeroAnnotation]()
         let name = viewModel.hero.name
         let id = viewModel.hero.id
+        
         for location in viewModel.locations {
+            let lat = Double(location.latitude ?? "") ?? 0.0
+            let lon = Double(location.longitude ?? "") ?? 0.0
+            
             annotations.append(
-                HeroAnnotation.init(coordinate: .init(latitude: Double(location.latitude ?? "") ?? 0.0,
-                                                      longitude: Double(location.longitude ?? "") ?? 0.0),
+                HeroAnnotation.init(coordinate: .init(latitude: lat, longitude: lon),
                                     title: name,
                                     id: id,
                                     date: location.date)
@@ -160,6 +203,8 @@ extension DetailViewController: MKMapViewDelegate {
         }
         return HeroAnnotationView.init(annotation: annotation, reuseIdentifier: HeroAnnotationView.reuseIdentifier)
     }
+    
+
 }
 
 //MARK: - Delegate CollectionView

@@ -25,8 +25,18 @@ extension UIViewController {
     }
     
 
+    
     @objc func logoutTapped() {
+        // Limpiar la BDD antes del logout
+        StoreDataProvider.shared.clearBBDD()
+        
+        // Limpiar el token de autenticación
+        let secureData = SecureDataKeychain()
+        secureData.deleteToken()
+        
         let backVC = LoginViewController()
         self.navigationController?.setViewControllers([backVC], animated: true)
     }
+    
+
 }

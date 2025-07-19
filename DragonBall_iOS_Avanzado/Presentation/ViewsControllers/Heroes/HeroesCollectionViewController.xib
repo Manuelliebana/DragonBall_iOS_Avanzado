@@ -48,10 +48,7 @@
                             </collectionViewFlowLayout>
                         </collectionView>
                     </subviews>
-                    <constraints>
-                        <constraint firstAttribute="trailing" secondItem="a9J-Yd-GNR" secondAttribute="trailing" constant="8" id="8BK-TN-Kud"/>
-                        <constraint firstItem="a9J-Yd-GNR" firstAttribute="leading" secondItem="4ia-LW-vKi" secondAttribute="leading" constant="8" id="ZH9-ta-CGb"/>
-                    </constraints>
+
                 </stackView>
                 <view hidden="YES" alpha="0.40000000596046448" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6m9-Vd-Rf4" userLabel="LoadingView">
                     <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
@@ -70,7 +67,6 @@
             <constraints>
                 <constraint firstAttribute="bottom" secondItem="gLL-0N-sNd" secondAttribute="bottom" id="1ZH-Hs-coL"/>
                 <constraint firstAttribute="bottom" secondItem="xcb-YF-FiB" secondAttribute="bottom" id="9NS-pv-VYu"/>
-                <constraint firstItem="4ia-LW-vKi" firstAttribute="leading" secondItem="z7p-jy-rH6" secondAttribute="leading" id="IUH-xN-W4Y"/>
                 <constraint firstItem="gLL-0N-sNd" firstAttribute="top" secondItem="RBH-LJ-x0b" secondAttribute="top" id="On0-d1-9Od"/>
                 <constraint firstItem="4ia-LW-vKi" firstAttribute="leading" secondItem="z7p-jy-rH6" secondAttribute="leading" constant="8" id="Rdr-vb-ZIw"/>
                 <constraint firstItem="4ia-LW-vKi" firstAttribute="trailing" secondItem="z7p-jy-rH6" secondAttribute="trailing" constant="8" id="Wsp-nJ-JEn"/>
@@ -79,7 +75,7 @@
                 <constraint firstAttribute="bottom" secondItem="6m9-Vd-Rf4" secondAttribute="bottom" id="hCW-0F-dHC"/>
                 <constraint firstItem="xcb-YF-FiB" firstAttribute="top" secondItem="RBH-LJ-x0b" secondAttribute="top" id="nxv-42-kMG"/>
                 <constraint firstAttribute="trailing" secondItem="gLL-0N-sNd" secondAttribute="trailing" id="pbc-6n-hLh"/>
-                <constraint firstItem="4ia-LW-vKi" firstAttribute="trailing" secondItem="z7p-jy-rH6" secondAttribute="trailing" id="qIY-GW-TNR"/>
+
                 <constraint firstAttribute="trailing" secondItem="xcb-YF-FiB" secondAttribute="trailing" id="rns-B8-fav"/>
                 <constraint firstItem="gLL-0N-sNd" firstAttribute="leading" secondItem="RBH-LJ-x0b" secondAttribute="leading" id="suI-Jy-ZKM"/>
                 <constraint firstAttribute="bottom" secondItem="4ia-LW-vKi" secondAttribute="bottom" id="uIx-D9-mqR"/>

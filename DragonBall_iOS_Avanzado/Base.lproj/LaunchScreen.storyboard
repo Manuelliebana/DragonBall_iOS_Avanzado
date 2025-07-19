@@ -10,12 +10,12 @@
         <!--View Controller-->
         <scene sceneID="3Mw-WX-ViX">
             <objects>
-                <viewController id="49R-zU-W2S" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LaunchScreen" id="49R-zU-W2S" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Vol-8l-KFU">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fondo5" translatesAutoresizingMaskIntoConstraints="NO" id="i1f-ns-iye">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fondo4" translatesAutoresizingMaskIntoConstraints="NO" id="i1f-ns-iye">
                                 <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                             </imageView>
                             <view alpha="0.40000000596046448" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WPl-Ue-5zV">
@@ -42,6 +42,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="fondo5" width="1116" height="1941"/>
+        <image name="fondo4" width="213.33332824707031" height="462"/>
     </resources>
 </document>

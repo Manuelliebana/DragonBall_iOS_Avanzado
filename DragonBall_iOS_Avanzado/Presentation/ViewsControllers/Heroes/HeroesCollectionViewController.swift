@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class HeroesCollectionViewController: UIViewController {
+final class HeroesCollectionViewController: UIViewController, UISearchBarDelegate {
     
     //MARK: - TypeAlias
     typealias DataSource = UICollectionViewDiffableDataSource<Int, NSMHero>
@@ -42,6 +42,7 @@ final class HeroesCollectionViewController: UIViewController {
         setupNavigationBarWithLogout()
         setObservers()
         collectionView.delegate = self
+        searchBar.delegate = self // Asignar el delegate
     }
     
     override func viewDidLayoutSubviews() {
@@ -138,6 +139,14 @@ extension HeroesCollectionViewController {
             snapshot.appendItems(self.viewModel.heroes)
             self.dataSource?.apply(snapshot)
         }
+    }
+}
+
+// MARK: - UISearchBarDelegate
+extension HeroesCollectionViewController {
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        viewModel.filterHeroes(with: searchText)
+        setUpCollectionView()
     }
 }
 

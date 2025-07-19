@@ -39,6 +39,7 @@ final class DetailViewModel {
     func loadData() {
         locations = Array(hero.heroToLocations ?? [])
         transformations = Array(hero.heroToTransformations ?? [])
+        
         if locations.isEmpty || transformations.isEmpty{
             loadDataFromServices(id: hero.id)
         } else {
@@ -51,6 +52,8 @@ final class DetailViewModel {
             self.detailViewState?(.loaded)
         }
     }
+    
+
     
     //MARK: - SelectTransformation
     func transformation(indexPath: IndexPath) -> NSMTransformations? {
@@ -131,6 +134,8 @@ final class DetailViewModel {
             }
         }
     }
+    
+
     
     private func addObservers() {
         NotificationCenter.default.addObserver(forName: NSManagedObjectContext.didSaveObjectsNotification, object: nil, queue: .main) { notification in

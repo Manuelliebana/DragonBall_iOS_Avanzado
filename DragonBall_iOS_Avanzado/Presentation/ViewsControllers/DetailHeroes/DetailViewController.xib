@@ -17,7 +17,6 @@
                 <outlet property="loadingView" destination="zbA-B8-XHu" id="Fin-NG-kF2"/>
                 <outlet property="mapView" destination="3Fq-Lb-pd0" id="fLG-Pr-215"/>
                 <outlet property="nameLabel" destination="tyM-tA-8VD" id="pgM-Pa-baP"/>
-                <outlet property="segmentedControl" destination="eZ0-cc-M7M" id="9cF-z7-f9A"/>
                 <outlet property="transformationsView" destination="tWS-F0-7P2" id="4nF-Ad-qOR"/>
                 <outlet property="view" destination="sGw-bK-XHA" id="YO3-as-o72"/>
             </connections>
@@ -99,6 +98,9 @@
                         <segment title="Satélite"/>
                         <segment title="Híbrido"/>
                     </segments>
+                    <connections>
+                        <action selector="changeMapType:" destination="-1" eventType="valueChanged" id="Lga-Ng-dzC"/>
+                    </connections>
                 </segmentedControl>
                 <view hidden="YES" alpha="0.40000000596046448" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zbA-B8-XHu" userLabel="LoadingView">
                     <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
@@ -141,7 +143,7 @@
         </view>
     </objects>
     <resources>
-        <image name="fondo4" width="1080" height="1920"/>
+        <image name="fondo4" width="213.33332824707031" height="462"/>
         <namedColor name="CustomColor1">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

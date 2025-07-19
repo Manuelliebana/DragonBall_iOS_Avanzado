@@ -12,7 +12,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SplashViewController" customModule="DragonBall_iOS_Avanzado" customModuleProvider="target">
             <connections>
                 <outlet property="splashActivityIndicator" destination="1yi-KE-5A2" id="y4g-1p-jbq"/>
-                <outlet property="view" destination="yKU-dL-v43" id="IXg-Oy-dnQ"/>
+                <outlet property="view" destination="R55-jJ-qBC" id="Mnk-8x-xzs"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -29,7 +29,7 @@
                 </view>
                 <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="1yi-KE-5A2">
                     <rect key="frame" x="178" y="407.66666666666669" width="37" height="37"/>
-                    <color key="color" systemColor="systemRedColor"/>
+                    <color key="color" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </activityIndicatorView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="x4g-VG-0jF"/>
@@ -56,9 +56,6 @@
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemRedColor">
-            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

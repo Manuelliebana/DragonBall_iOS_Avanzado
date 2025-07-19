@@ -52,7 +52,7 @@
                                 <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Y9-Lb-61w">
                                     <rect key="frame" x="0.0" y="0.0" width="369" height="0.0"/>
                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                    <color key="textColor" systemColor="systemRedColor"/>
+                                    <color key="textColor" name="CustomColor2"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                             </subviews>
@@ -73,7 +73,7 @@
                                 <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qoy-xd-moA">
                                     <rect key="frame" x="0.0" y="0.0" width="369" height="0.0"/>
                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                    <color key="textColor" systemColor="systemRedColor"/>
+                                    <color key="textColor" name="CustomColor2"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                             </subviews>
