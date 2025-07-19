@@ -12,7 +12,11 @@
           "value" : "dark"
         }
       ],
+<<<<<<< HEAD
       "filename" : "fondo4.png",
+=======
+      "filename" : "Fondo4.png",
+>>>>>>> baf4b6ac1e6cf4786ad35497bdc50d70bfb93e3f
       "idiom" : "universal",
       "scale" : "1x"
     },
@@ -28,7 +32,11 @@
           "value" : "dark"
         }
       ],
+<<<<<<< HEAD
       "filename" : "fondo4@2x.png",
+=======
+      "filename" : "Fondo4@2x.png",
+>>>>>>> baf4b6ac1e6cf4786ad35497bdc50d70bfb93e3f
       "idiom" : "universal",
       "scale" : "2x"
     },
@@ -44,7 +52,11 @@
           "value" : "dark"
         }
       ],
+<<<<<<< HEAD
       "filename" : "fondo4@3x.png",
+=======
+      "filename" : "Fondo4@3x.png",
+>>>>>>> baf4b6ac1e6cf4786ad35497bdc50d70bfb93e3f
       "idiom" : "universal",
       "scale" : "3x"
     }
