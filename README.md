@@ -61,28 +61,24 @@ Asegúrate de aceptar los permisos cuando se soliciten.
 ## 📱 Capturas de pantalla - Modo claro y oscuro.
 
 ### 1. Login
-- Modo claro:<br>
-  <img src="./DragonBall_iOS_Avanzado/Resources/ScreenShots/ScreenshotClaro1.png" alt="Pantalla de login clara" width="300"/>
-- Modo oscuro:<br>
-  <img src="./DragonBall_iOS_Avanzado/Resources/ScreenShots/ScreenshotOscuro1.png" alt="Pantalla de login oscura" width="300"/>
+| Modo claro | Modo oscuro |
+|:----------:|:-----------:|
+| <img src="./DragonBall_iOS_Avanzado/Resources/ScreenShots/ScreenshotClaro1.png" alt="Pantalla de login clara" width="150"/> | <img src="./DragonBall_iOS_Avanzado/Resources/ScreenShots/ScreenshotOscuro1.png" alt="Pantalla de login oscura" width="150"/> |
 
 ### 2. Lista de héroes
-- Modo claro:<br>
-  <img src="./DragonBall_iOS_Avanzado/Resources/ScreenShots/ScreenshotClaro2.png" alt="Lista de héroes clara" width="300"/>
-- Modo oscuro:<br>
-  <img src="./DragonBall_iOS_Avanzado/Resources/ScreenShots/ScreenshotOscuro2.png" alt="Lista de héroes oscura" width="300"/>
+| Modo claro | Modo oscuro |
+|:----------:|:-----------:|
+| <img src="./DragonBall_iOS_Avanzado/Resources/ScreenShots/ScreenshotClaro2.png" alt="Lista de héroes clara" width="150"/> | <img src="./DragonBall_iOS_Avanzado/Resources/ScreenShots/ScreenshotOscuro2.png" alt="Lista de héroes oscura" width="150"/> |
 
 ### 3. Detalle del héroe y transformación
-- Modo claro:<br>
-  <img src="./DragonBall_iOS_Avanzado/Resources/ScreenShots/ScreenshotClaro3.png" alt="Detalle de héroe clara" width="300"/>
-- Modo oscuro:<br>
-  <img src="./DragonBall_iOS_Avanzado/Resources/ScreenShots/ScreenshotOscuro3.png" alt="Detalle de héroe oscura" width="300"/>
+| Modo claro | Modo oscuro |
+|:----------:|:-----------:|
+| <img src="./DragonBall_iOS_Avanzado/Resources/ScreenShots/ScreenshotClaro3.png" alt="Detalle de héroe clara" width="150"/> | <img src="./DragonBall_iOS_Avanzado/Resources/ScreenShots/ScreenshotOscuro3.png" alt="Detalle de héroe oscura" width="150"/> |
 
 ### 4. Detalle de transformación
-- Modo claro:<br>
-  <img src="./DragonBall_iOS_Avanzado/Resources/ScreenShots/ScreenshotClaro4.png" alt="Detalle de transformación clara" width="300"/>
-- Modo oscuro:<br>
-  <img src="./DragonBall_iOS_Avanzado/Resources/ScreenShots/ScreenshotOscuro4.png" alt="Detalle de transformación oscura" width="300"/>
+| Modo claro | Modo oscuro |
+|:----------:|:-----------:|
+| <img src="./DragonBall_iOS_Avanzado/Resources/ScreenShots/ScreenshotClaro4.png" alt="Detalle de transformación clara" width="150"/> | <img src="./DragonBall_iOS_Avanzado/Resources/ScreenShots/ScreenshotOscuro4.png" alt="Detalle de transformación oscura" width="150"/> |
 
 
 ---
