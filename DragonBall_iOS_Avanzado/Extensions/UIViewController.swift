@@ -5,6 +5,7 @@
 //  Created by Manuel Liebana Montoro on 18/7/25.
 //
 
+
 import UIKit
 
 extension UIViewController {
@@ -25,7 +26,6 @@ extension UIViewController {
     }
     
 
-    
     @objc func logoutTapped() {
         // Limpiar la BDD antes del logout
         StoreDataProvider.shared.clearBBDD()
